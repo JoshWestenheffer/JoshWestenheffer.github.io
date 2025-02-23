@@ -30,16 +30,14 @@
  <br><br>
 
  <p> Below is both the original and updated screen for the calendar app. The left is the original only featuring August and you can see the cluttered buttons and lack of understanding I had at the time. On the right, is the new updated screen that allows users to switch through any month in this calendar year. 
- The buttons were removed to help improve the user experience on this main screen, instead clicking a day would now take users to a unique day page.</p>
+ The buttons were removed to help improve the user experience on this main screen, instead clicking a day would now take users to a unique day page.  To achieve this I removed the buttons from the xml file and added a 6x7 grid. To populate the grids I created functions for finding where the first day of the month would fall on and how many days are in a month.
+ Then I created the function that populates the days of the months, here is what that looked like originally and updated.</p>
 
  <br><br>
  <div style="display: flex; justify-content: center; gap: 10px;">
     <img src="files/data-display-before.png" alt="Original Data Display" style="width: 45%; max-width: 400px; height: auto;">
     <img src="files/Data-Display-Screen.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
 </div>
-
- <p> To achieve this I removed the buttons from the xml file and added a 6x7 grid. To populate the grids I created functions for finding where the first day of the month would fall on and how many days are in a month.
- Then I created the function that populates the days of the months, here is what that looked like originally and updated.</p>
  
  <br><br>
 
@@ -54,7 +52,7 @@
 </div>
  <br><br>
 
-The above shows the creation and initialization of the nested hashmap titled calendarData. The months array is used for the outer hashmaps key, with the value being the inner hashmap where this inner key is a day of the given month and the value is the text entered by the user. 
+Below shows the creation and initialization of the nested hashmap titled calendarData. The months array is used for the outer hashmaps key, with the value being the inner hashmap where this inner key is a day of the given month and the value is the text entered by the user. 
 The farthest right picture above showing the changeMonth function is the function called when the next or last buttons are hit to change the month. The month takes the array of months and uses the index of the array for which month to display. 
 
  
