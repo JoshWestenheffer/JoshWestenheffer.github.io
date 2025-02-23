@@ -13,6 +13,11 @@
             padding: 10px;
             margin-right: 10px;
         }
+      p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+         }
     </style>
 </head>
 <body>
@@ -24,6 +29,26 @@
         <a href="enhancement-three.html">Enhancement Three</a>
     </nav>
     <h1>Enhancement Two</h1>
-    <p>Details about Enhancement Two go here.</p>
+
+    <p>For this enhancement the theme was Algorithms and Data Structures. My work here consisted of creating an entirely new java file and xml to incorporate the text that users would enter into specific days of the calendar.
+    This involved creating functions and new logic to efficiently store the user data I was receiving. First here is a look at the difference in data storage, with the incorporation of the user data screen. </p>
+<br>
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/enhance2/original-data-screen.png" alt="Original Data Display" style="width: 45%; max-width: 400px; height: auto;">
+    <img src="files/enhance2/new-data-screen.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
+</div>
+ <br><br>
+
+ <p> Now that this new page exists the data is being entered through the text box and then I need to save this. Originally the data was stored to a specific textview of the month, now it is being stored within the hashmap. Here is a look at this logic. 
+ For a calendar like this storing multiple days across months is a crucial part for users. So, a nested hashmap is an efficient solution that will make this possible while providing solid performance. 
+ To store this user data between files I initialize a copy of the hashmap and store the user data within the nested hashmap structure. Specifically, the nested hashmap structure looks like this: hashmap<month, hashmap<day,usertext>> </p>
+ <br>
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/enhance2/add-data-function.png" alt="Original Data Display" style="width: 45%; max-width: 400px; height: auto;">
+    <img src="files/enhance2/delete-data-function.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
+  <img src="files/enhance2/save-data-function.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
+</div>
+ <br><br>
+ 
 </body>
 </html>
