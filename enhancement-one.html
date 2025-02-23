@@ -13,6 +13,11 @@
             padding: 10px;
             margin-right: 10px;
         }
+         p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+         }
     </style>
 </head>
 <body>
@@ -46,14 +51,19 @@
  I'll show this created hashmap below and a basic functionality to switch the months, there will be no before pictures since there was no population logic for the month it was just hardcoded before.</p>
  <br><br>
  <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/hashmap-after.png" alt="Original Data Display" style="width: 45%; max-width: 900px; height: auto;">
-    <img src="files/hashmap-initial.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
-    <img src="files/calendar-switch.png" alt="Updated Data Display" style="width: 45%; max-width: 700px; height: auto;">
+    <img src="files/hashmap-after.png" alt="HM Creation" style="width: 45%; max-width: 900px; height: auto;">
+    <img src="files/hashmap-initial.png" alt="HM initialization" style="width: 45%; max-width: 400px; height: auto;">
+    <img src="files/calendar-switch.png" alt="Jan-Dec" style="width: 45%; max-width: 700px; height: auto;">
 </div>
  <br><br>
 
-Below shows the creation and initialization of the nested hashmap titled calendarData. The months array is used for the outer hashmaps key, with the value being the inner hashmap where this inner key is a day of the given month and the value is the text entered by the user. 
-The farthest right picture above showing the changeMonth function is the function called when the next or last buttons are hit to change the month. The month takes the array of months and uses the index of the array for which month to display. 
+ To tie this all together, during this enhance I had to create my update calendar function that would update the calendar when navigated between months. This step involved creating a function that took the days of the month and the first day of the week and then populated the calendar text views.
+ The first day of the week I created a function for and the days in each month I created a switch statement for. The updateCalendar function will iterate through each textview for the month and fill any views not in the month to be blank and any view in the month to be 1-x.
+ <br><br>
+ <img src="files/days-in-month.png" alt="updateCalendar function" style="width: 45%; max-width: 700px; height: auto;">
+ <img src="files/first-day-week.png" alt="updateCalendar function" style="width: 45%; max-width: 700px; height: auto;">
+ <img src="files/update-calendar.png" alt="updateCalendar function" style="width: 45%; max-width: 700px; height: auto;">
+ 
 
  
 </body>
