@@ -38,6 +38,20 @@
     <img src="files/Data-Display-Screen.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
 </div>
 
+ <p> To achieve this I removed the buttons from the xml file and added a 6x7 grid. To populate the grids I created functions for finding where the first day of the month would fall on and how many days are in a month.
+ Then I created the function that populates the days of the months, here is what that looked like originally and updated.</p>
+ 
+ <br><br>
+
+ <p> My initial project's logic used the add button, delete button, and the active listener all tied to each individual grid text view. To combat this I wanted to separate the responsibilites by creating a separate page for user data and for the days of the months. 
+ This enhancement focused on getting rid of the buttons which can be seen in the screenshot below and creating logic to handle populating each month of the year. Knowing I wanted to later store user data using these months and days my solution was a nested hashmap.
+ I'll show this created hashmap below and a basic functionality to switch the months, there will be no before pictures since there was no population logic for the month it was just hardcoded before.</p>
+ <br><br>
+ <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/hashmap-after.png" alt="Original Data Display" style="width: 45%; max-width: 400px; height: auto;">
+    <img src="files/hashmap-initial.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
+    <img src="files/calendar-switch.png" alt="Updated Data Display" style="width: 45%; max-width: 400px; height: auto;">
+</div>
  
 </body>
 </html>
