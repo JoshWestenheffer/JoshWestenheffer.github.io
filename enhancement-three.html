@@ -13,6 +13,11 @@
             padding: 10px;
             margin-right: 10px;
         }
+     p {
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.5;
+         }
     </style>
 </head>
 <body>
@@ -24,6 +29,43 @@
         <a href="enhancement-three.html">Enhancement Three</a>
     </nav>
     <h1>Enhancement Three</h1>
-    <p>Details about Enhancement Three go here.</p>
+ 
+    <p>For this final enhancement the theme was databases. For my project I implemented a userid link to the nested hashmap I created to hold user information. The database will take a users login credentials and link this to their unique id.
+    This id will find their specific calendar state and will use this database table to return old information and store new information. The table consists of the hashmaps keys and values, specifically the month, date, and user information.
+    Below I will show how this database is setup using SQLite and the way the table is formatted.</p>
+ <br>
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/enhance3/event-table-creation.png" alt="Original Data Display" style="width: 45%; max-width: 500px; height: auto;">
+    <img src="files/enhance3/event-table-initial.png" alt="Updated Data Display" style="width: 45%; max-width: 500px; height: auto;">
+</div>
+ <br><br>
+
+ <p> After creating the table there is still work to be done for populating the table and creating functions to be called for populating the user tables. To do this, I created an add event function to be called when the user hits the save button for their data. 
+ The save button function was discussed on the last enhancement, when this button is hit the logic will place all needed data with the nested hashmap. However, sending this hashmap to the database is not as simple, instead the addEvent function is called and the data points are sent to be stored.
+ Besides just storing the data, the datbase will also be used as to retrieve data when a user clicks a day of the year. To do this the function retrieves the correct information for a day and returns it as a nested hashmap to be used throughout the code. If the day has no information it returns a blank hashmap.
+ Here's a look at these two functions. </p>
+ <br>
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/enhance3/add-event.png" alt="Original Data Display" style="width: 45%; max-width: 500px; height: auto;">
+    <img src="files/enhance3/events-for-user.png" alt="Updated Data Display" style="width: 45%; max-width: 500px; height: auto;">
+</div>
+ <br><br>
+
+ <p>
+  With all of this, the calendar is functioning and can hold multiple users and has unique hashmaps for users. The final touch I added was to provide users with unique logins through a user check. Since the users credentials are being stored in the database, I take this and run a check to see if they exist.
+  If their credentials exist, their userid will be found and they will be logged in and their unique information will be ready for them. Here is a look at how this is done.
+ </p>
+ <br>
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="files/enhance3/user-check.png" alt="Original Data Display" style="width: 45%; max-width: 500px; height: auto;">
+</div>
+ <br><br>
+ <p> The first outcome for this enhancement was dealing with designing quality communications to clearly convey my changes. Dealing with this database code has been difficult to explain in simple terms, but has provided me with good practice writing about these complex coding structures.
+ The second outcome is using well founded techniques to implement my goals and changes. Working with this database provided me with a lot of difficult code interactions between my files. 
+  Specifically, managing the nested hashmap throughout code files to ensure that user information was being consistently stored and taken care of. My end design features clear, well written functions that do everything I was hoping they would do.
+ I hit multiple road blocks along the way and had to go back and start again, but in the end I managed to reach my goals. My final outcome is focused on developing a security mindset to ensure privacy, mitigate desing flaws, and protect user data.
+ Separating my users by id and assigning them all independent hashmaps was the first step to protecting them. All throughout my code I have consistent and undersatndle function interactions that mitigate any risk of flaws causing for users to be compromised in any way.
+ As for baseline security the app features a check to ensure that the username and password are used to secure a users login and so far I have seen no issues with this.</p>
+ 
 </body>
 </html>
