@@ -3,6 +3,16 @@
 <head>
     <title>Enhancement Three</title>
     <style>
+
+        h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
         nav {
             background-color: #333;
             padding: 10px;
@@ -13,11 +23,61 @@
             padding: 10px;
             margin-right: 10px;
         }
-     p {
+         p {
             max-width: 1000px;
             margin: 0 auto;
             line-height: 1.5;
          }
+     
+    .container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; 
+    line-height: 1.6; 
+}
+
+p {
+    font-size: 18px; 
+}
+
+}
+    .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-container img {
+    height: auto;
+    max-width: 100%; 
+}
+
+
+.half-width {
+    width: calc(50% - 10px);
+    max-width: 400px;
+}
+
+.full-width {
+    width: 90%; 
+    max-width: 600px; 
+}
+
+@media (max-width: 800px) {
+    .half-width, .full-width {
+        width: 100%; 
+    }
+}
+
     </style>
 </head>
 <body>
@@ -28,15 +88,16 @@
         <a href="enhancement-two.html">Enhancement Two</a>
         <a href="enhancement-three.html">Enhancement Three</a>
     </nav>
+  <div class="container">
     <h1>Enhancement Three</h1>
  
     <p>For this final enhancement the theme was databases. For my project I implemented a userid link to the nested hashmap I created to hold user information. The database will take a users login credentials and link this to their unique id.
     This id will find their specific calendar state and will use this database table to return old information and store new information. The table consists of the hashmaps keys and values, specifically the month, date, and user information.
     Below I will show how this database is setup using SQLite and the way the table is formatted.</p>
  <br>
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/enhance3/event-table-creation.png" alt="Original Data Display" style="width: 45%; max-width: 500px; height: auto;">
-    <img src="files/enhance3/event-table-initial.png" alt="Updated Data Display" style="width: 45%; max-width: 500px; height: auto;">
+  <div class="image-container">
+    <img src="files/enhance3/event-table-creation.png" alt="Original Data Display" class="half-width">
+    <img src="files/enhance3/event-table-initial.png" alt="Updated Data Display" class="full-width">
 </div>
  <br><br>
 
@@ -45,9 +106,9 @@
  Besides just storing the data, the datbase will also be used as to retrieve data when a user clicks a day of the year. To do this the function retrieves the correct information for a day and returns it as a nested hashmap to be used throughout the code. If the day has no information it returns a blank hashmap.
  Here's a look at these two functions. </p>
  <br>
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/enhance3/add-event.png" alt="Original Data Display" style="width: 45%; max-width: 700px; height: auto;">
-    <img src="files/enhance3/events-for-user.png" alt="Updated Data Display" style="width: 45%; max-width: 700px; height: auto;">
+  <div class="image-container">
+    <img src="files/enhance3/add-event.png" alt="Original Data Display" class="full-width">
+    <img src="files/enhance3/events-for-user.png" alt="Updated Data Display" class="full-width">
 </div>
  <br><br>
 
@@ -56,8 +117,8 @@
   If their credentials exist, their userid will be found and they will be logged in and their unique information will be ready for them. Here is a look at how this is done.
  </p>
  <br>
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/enhance3/user-check.png" alt="Original Data Display" style="width: 45%; max-width: 600px; height: auto;">
+  <div class="image-container">
+    <img src="files/enhance3/user-check.png" alt="Original Data Display" class="full-width">
 </div>
  <br><br>
  <p> The first outcome for this enhancement was dealing with designing quality communications to clearly convey my changes. Dealing with this database code has been difficult to explain in simple terms, but has provided me with good practice writing about these complex coding structures.
@@ -66,6 +127,7 @@
  I hit multiple road blocks along the way and had to go back and start again, but in the end I managed to reach my goals. My final outcome is focused on developing a security mindset to ensure privacy, mitigate desing flaws, and protect user data.
  Separating my users by id and assigning them all independent hashmaps was the first step to protecting them. All throughout my code I have consistent and undersatndle function interactions that mitigate any risk of flaws causing for users to be compromised in any way.
  As for baseline security the app features a check to ensure that the username and password are used to secure a users login and so far I have seen no issues with this.</p>
- 
+
+  </div>
 </body>
 </html>
