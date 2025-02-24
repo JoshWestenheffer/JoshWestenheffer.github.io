@@ -3,6 +3,16 @@
 <head>
     <title>Enhancement Two</title>
     <style>
+
+        h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
         nav {
             background-color: #333;
             padding: 10px;
@@ -13,11 +23,61 @@
             padding: 10px;
             margin-right: 10px;
         }
-      p {
+         p {
             max-width: 1000px;
             margin: 0 auto;
             line-height: 1.5;
          }
+     
+    .container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; 
+    line-height: 1.6; 
+}
+
+p {
+    font-size: 18px; 
+}
+
+}
+    .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-container img {
+    height: auto;
+    max-width: 100%; 
+}
+
+
+.half-width {
+    width: calc(50% - 10px);
+    max-width: 400px;
+}
+
+.full-width {
+    width: 100%; 
+    max-width: 800px; 
+}
+
+@media (max-width: 800px) {
+    .half-width, .full-width {
+        width: 100%; 
+    }
+}
+
     </style>
 </head>
 <body>
@@ -33,9 +93,9 @@
     <p>For this enhancement the theme was Algorithms and Data Structures. My work here consisted of creating an entirely new java file and xml to incorporate the text that users would enter into specific days of the calendar.
     This involved creating functions and new logic to efficiently store the user data I was receiving. First here is a look at the difference in data storage, with the incorporation of the user data screen. </p>
 <br>
-<div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/enhance2/original-data-screen.png" alt="Original Data Display" style="width: 45%; max-width: 500px; height: auto;">
-    <img src="files/enhance2/new-data-screen.png" alt="Updated Data Display" style="width: 45%; max-width: 500px; height: auto;">
+<div class="image-container">
+    <img src="files/enhance2/original-data-screen.png" alt="Original Data Display" class="half-width">
+    <img src="files/enhance2/new-data-screen.png" alt="Updated Data Display" class="half-width">
 </div>
  <br><br>
 
@@ -44,10 +104,10 @@
  The third picture shows the new solution that is built around storing the data efficiently within the nested hashmap. Specifically, the user data is the key to the inner hashmap which I can then transfer between files and later incorporated into the database.
  
  <br>
-<div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="files/enhance2/add-data-function.png" alt="Original Data Display" style="width: 45%; max-width: 600px; height: auto;">
-    <img src="files/enhance2/delete-data-function.png" alt="Updated Data Display" style="width: 45%; max-width: 600px; height: auto;">
-  <img src="files/enhance2/save-data-function.png" alt="Updated Data Display" style="width: 45%; max-width: 900px; height: auto;">
+<div class="image-container">
+    <img src="files/enhance2/add-data-function.png" alt="Original Data Display" class="full-width">
+    <img src="files/enhance2/delete-data-function.png" alt="Updated Data Display" class="full-width">
+  <img src="files/enhance2/save-data-function.png" alt="Updated Data Display" class="full-width">
 </div>
  <br><br>
 
